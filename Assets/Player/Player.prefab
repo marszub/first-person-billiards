@@ -334,8 +334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a96535cd2c52c0488c5ac2e50e1e93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForce: 100
-  maxTime: 5
+  maxForce: 50
+  maxTime: 2
   zeroVelocity: 1
   powerBar: {fileID: 2283843746585250674}
 --- !u!1 &7013706941737249930

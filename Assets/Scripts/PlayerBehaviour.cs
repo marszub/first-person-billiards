@@ -29,6 +29,11 @@ public class PlayerBehaviour : MonoBehaviour
         if (Input.GetButtonUp("Strike"))
         {
             Debug.Log("Strike");
+            Vector3 direction = Camera.main.transform.forward;
+            if(direction.y < 0.1f)
+            {
+                direction.y = 0.1f;
+            }
             rigid.AddForce(Camera.main.transform.forward * maxForce * getForcePercent(), ForceMode.VelocityChange);
             timePressed = invalidTime;
         }
