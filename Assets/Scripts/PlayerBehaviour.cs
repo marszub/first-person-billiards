@@ -30,11 +30,11 @@ public class PlayerBehaviour : MonoBehaviour
         {
             Debug.Log("Strike");
             Vector3 direction = Camera.main.transform.forward;
-            if(direction.y < 0.1f)
+            if(direction.y < 0)
             {
-                direction.y = 0.1f;
+                direction.y = 0.0f;
             }
-            rigid.AddForce(Camera.main.transform.forward * maxForce * getForcePercent(), ForceMode.VelocityChange);
+            rigid.AddForce(direction * maxForce * getForcePercent(), ForceMode.VelocityChange);
             timePressed = invalidTime;
         }
         if (Input.GetButtonDown("CancelStrike"))
