@@ -19,5 +19,9 @@ public class PoleBehaviour : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger Enter");
+        if (other.tag == "Ball")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
