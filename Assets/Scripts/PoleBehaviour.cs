@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PoleBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
+        levelState = GameObject.FindGameObjectWithTag("GameController").GetComponent<LevelState>();
     }
 
     // Update is called once per frame
@@ -18,10 +17,13 @@ public class PoleBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger Enter");
         if (other.tag == "Ball")
         {
+            Debug.Log("Ball");
             Destroy(other.gameObject);
+            levelState.score();
         }
     }
+
+    private LevelState levelState;
 }
