@@ -24,7 +24,6 @@ public class LevelState : MonoBehaviour
         var allBalls = GameObject.FindGameObjectsWithTag("Ball");
         ballsCount = allBalls.Length;
         ballsDisplay.text = ballsCount.ToString();
-        StartCoroutine(showEndScreenAfterTime());
     }
 
     void Update()
@@ -41,7 +40,7 @@ public class LevelState : MonoBehaviour
         ballsCount -= 1;
         ballsDisplay.text = ballsCount.ToString();
 
-        if(ballsCount == 0)
+        if(ballsCount <= 0)
             StartCoroutine(showEndScreenAfterTime());
     }
 
