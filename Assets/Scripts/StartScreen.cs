@@ -7,6 +7,7 @@ public class StartScreen : MonoBehaviour
 {
     public void playGame()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(1);
     }
 }

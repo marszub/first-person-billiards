@@ -11,6 +11,8 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody>();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
